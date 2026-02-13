@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine? 💝</title>
+    <meta name="description" content="A special Valentine's Day message for someone very special.">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Floating hearts background -->
+    <div class="floating-hearts" id="floatingHearts"></div>
+
+    <!-- Music Controls -->
+    <div class="music-controls" id="musicControls">
+        <button id="musicToggle" class="music-btn">🎵</button>
+        <button id="soundToggle" class="music-btn">🔊</button>
+        <audio id="bgMusic" loop>
+            <source id="musicSource" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <!-- ==================== STAGE 1: INTRO (Sequential Animation) ==================== -->
+    <div class="stage active" id="stage1">
+        <div class="intro-fullscreen">
+            <div class="intro-text-area" id="introTextArea">
+                <!-- Lines will be injected by JS and animated sequentially -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== STAGE 2: FIRST QUESTION ==================== -->
+    <div class="stage hidden" id="stage2">
+        <div class="card question-card">
+            <div class="cute-character-img">
+                <img src="./photos/panda_shy.svg" alt="Cute panda" class="panda-img">
+            </div>
+            <h2 class="q-title" id="q1Title"></h2>
+            <p class="q-subtitle" id="q1Subtitle"></p>
+            <p class="q-text" id="q1Text"></p>
+            <div class="btn-row">
+                <button class="btn btn-yes" id="yesBtn1" onclick="handleYes()"></button>
+                <button class="btn btn-no" id="noBtn1" onclick="handleNo(this)"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== STAGE 3: VALENTINE QUESTION ==================== -->
+    <div class="stage hidden" id="stage3">
+        <div class="card valentine-card">
+            <div class="card-flowers top-left"></div>
+            <div class="card-flowers top-right"></div>
+            <div class="card-flowers bottom-left"></div>
+            <div class="card-flowers bottom-right"></div>
+            <div class="cute-character-img">
+                <img src="./photos/panda_happy.svg" alt="Cute panda" class="panda-img panda-img-valentine">
+            </div>
+            <h2 class="v-title" id="vTitle"></h2>
+            <p class="v-heart" id="vHeart"></p>
+            <div class="options-grid" id="optionsGrid"></div>
+            <p class="v-hint" id="vHint"></p>
+        </div>
+    </div>
+
+    <!-- ==================== STAGE 4: LOVE METER ==================== -->
+    <div class="stage hidden" id="stage4">
+        <div class="card meter-card">
+            <h2 class="meter-title" id="meterTitle"></h2>
+            <div class="love-meter-container">
+                <div class="meter-value-display">
+                    <span id="meterStartText"></span>
+                    <span class="meter-percentage">(<span id="meterValue">0</span>%)</span>
+                </div>
+                <input type="range" min="0" max="10000" value="0" class="love-slider" id="loveSlider">
+                <p class="meter-message hidden" id="meterMessage"></p>
+            </div>
+            <button class="btn btn-primary" id="meterNextBtn" onclick="goToStage(5)"></button>
+        </div>
+    </div>
+
+    <!-- ==================== STAGE 5: CELEBRATION ==================== -->
+    <div class="stage hidden" id="stage5">
+        <canvas id="fireworksCanvas"></canvas>
+        <div class="card celebration-card">
+            <div class="card-flowers top-left"></div>
+            <div class="card-flowers top-right"></div>
+            <div class="card-flowers bottom-left"></div>
+            <div class="card-flowers bottom-right"></div>
+            <h2 class="celeb-title" id="celebTitle"></h2>
+            <div class="celeb-divider">— 💕 —</div>
+            <div class="celeb-content">
+                <div class="bouquet-area">🌸🌷🌹🌺💐🌻🌼</div>
+                <div class="languages-list" id="languagesList"></div>
+            </div>
+            <div class="hearts-row">❤️ 💗 ❤️ 💗 ❤️ 💗 ❤️ 💗 ❤️ 💗 ❤️ 💗 ❤️</div>
+            <p class="with-love" id="withLove"></p>
+            <button class="btn btn-letter" id="letterBtn" onclick="goToStage(6)"></button>
+        </div>
+    </div>
+
+    <!-- ==================== STAGE 6: LOVE LETTER POPUP ==================== -->
+    <div class="stage hidden" id="stage6">
+        <canvas id="fireworksCanvas2"></canvas>
+        <div class="letter-overlay" onclick="closeLetter(event)">
+            <div class="greeting-card" id="greetingCard">
+                <div class="card-border-decoration"></div>
+                <div class="card-inner">
+                    <h2 class="letter-title" id="letterTitle"></h2>
+                    <div class="letter-body" id="letterBody"></div>
+                    <p class="letter-closing" id="letterClosing"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
