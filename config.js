@@ -3,12 +3,12 @@
 // ============================================
 
 const CONFIG = {
-    valentineName: "My Love",
-    pageTitle: "Will You Be My Valentine? 💝",
+    valentineName: "Kannama",
+    pageTitle: "Will You Be My Kattachi? 💝",
 
     // Stage 1 — Intro sequence (animated like valentine-day-special)
     intro: {
-        greeting: "Hey Beauty",
+        greeting: "Hey Beauty cutiee",
         greetingEmoji: "💕",
         // These appear one by one, hold, then fade before the next one
         lines: [
@@ -24,7 +24,7 @@ const CONFIG = {
     // Stage 2 — First question
     firstQuestion: {
         image: "./photos/panda_shy.png",
-        title: "Hey!",
+        title: "Miee!",
         subtitle: "I want to ask you something?",
         question: "Can I?",
         yesBtn: "YES",
@@ -34,7 +34,7 @@ const CONFIG = {
     // Stage 3 — Valentine question
     valentineQuestion: {
         image: "./photos/panda_happy.png",
-        title: "Will you be my Valentine?",
+        title: "Will you be my Kannama forever?",
         heart: "💕",
         options: [
             { label: "A", text: "Yes" },
@@ -52,7 +52,7 @@ const CONFIG = {
         messages: {
             low: "Just getting started... 🥺",
             normal: "Aww! 🥰",
-            high: "And beyond! 🥰",
+            high: "And way more than 10%! 🥰",
             veryHigh: "To infinity and beyond! 🚀💝",
             extreme: "WOOOOW You love me that much?? 🥰🚀💝"
         },
@@ -82,7 +82,7 @@ const CONFIG = {
 
     // Stage 6 — Love letter (EDIT YOUR PERSONAL MESSAGE HERE!)
     loveLetter: {
-        title: "My Dearest Valentine 💕",
+        title: "My Dearest Kannama💕",
         paragraphs: [
             "From the moment you walked into my life, everything became more beautiful. Your smile lights up my darkest days, and your love makes me feel like the luckiest person in the world.",
             "Every moment with you is a treasure I hold close to my heart. You are my best friend, my soulmate, and my forever love.",
