@@ -87,9 +87,9 @@ const CONFIG = {
             "From the moment you walked into my life, everything became more beautiful like u katachi. Your smile lights up my dark days, and your love makes me feel like the luckiest person in the world.",
             "Even when you’re not physically with me, just knowing you’re there — believing in me, loving me — gives me strength, motivation, and hope. On my lowest days and in my quietest struggles, the thought of you keeps me going.",
             "Every moment with you is a treasure to my heart. You are my best friend, my safe place, my soulmate, and my forever love cutiee.",
-            "On this Valentine’s Day, and every day after, I promise to cherish you, stand by you, and love you with all my heart , Alaways yours Mutta."
+            "On this Valentine’s Day, and every day after, I promise to cherish you, stand by you, and love you with all my heart , We become better together."
         ],
-        closing: "We beacome better together ❤️"
+        closing: "Forever Yours Mutta ❤️"
     },
 
     // Music settings
