@@ -563,7 +563,8 @@ body {
    ============================================ */
 
 #fireworksCanvas,
-#fireworksCanvas2 {
+#fireworksCanvas2,
+#fireworksCanvas3 {
     position: fixed;
     top: 0;
     left: 0;
@@ -887,4 +888,110 @@ body {
 .celebration-card::-webkit-scrollbar-thumb {
     background: #f48fb1;
     border-radius: 3px;
+}
+
+/* ============================================
+   STAGE 7: VIDEO
+   ============================================ */
+
+.video-wrapper {
+    width: 90%;
+    max-width: 800px;
+    background: #000;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+    position: relative;
+    border: 4px solid #c2185b;
+}
+
+.styled-video {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    outline: none;
+}
+
+/* ============================================
+   STAGE 8: FINAL CELEBRATION
+   ============================================ */
+
+.final-celebration {
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: finalPopIn 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes finalPopIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.final-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 5rem;
+    color: #fff;
+    text-shadow: 0 0 20px #ff0055, 0 0 40px #ff0055;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+.final-decorations {
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    animation: bounce 2s infinite;
+}
+
+.btn-video {
+    margin-top: 20px;
+    background: white;
+    color: #e91e63;
+    border: 2px solid #e91e63;
+    padding: 15px;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Poppins', sans-serif;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(233, 30, 99, 0.2);
+    width: 60px;
+    height: 60px;
+}
+
+.btn-video:hover {
+    background: #e91e63;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(233, 30, 99, 0.4);
+}
+
+@media (max-width: 600px) {
+    .final-text {
+        font-size: 3rem;
+    }
+
+    .final-decorations {
+        font-size: 2rem;
+    }
 }

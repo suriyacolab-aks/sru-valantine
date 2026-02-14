@@ -113,7 +113,38 @@
                     <h2 class="letter-title" id="letterTitle"></h2>
                     <div class="letter-body" id="letterBody"></div>
                     <p class="letter-closing" id="letterClosing"></p>
+                    <div class="video-btn-container">
+                        <button class="btn btn-video" id="watchVideoBtn" onclick="goToStage(7)">
+                            📺
+                        </button>
+                        <span class="video-label">Let's Dance 💃</span>
+                    </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== STAGE 7: VIDEO ==================== -->
+    <div class="stage hidden" id="stage7">
+        <div class="video-wrapper">
+            <div class="card-flowers top-left"></div>
+            <div class="card-flowers top-right"></div>
+            <div class="card-flowers bottom-left"></div>
+            <div class="card-flowers bottom-right"></div>
+            <video id="valentineVideo" class="styled-video" controls>
+                <source src="./vedio/20260215_022104_es_edited.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <!-- ==================== STAGE 8: FINAL CELEBRATION ==================== -->
+    <div class="stage hidden" id="stage8">
+        <canvas id="fireworksCanvas3"></canvas>
+        <div class="final-celebration">
+            <h1 class="final-text">Happy Valentine's Day<br>to my Valentine! ❤️</h1>
+            <div class="final-decorations">
+                <span>🌹</span><span>🌸</span><span>🌺</span><span>🌷</span>
             </div>
         </div>
     </div>

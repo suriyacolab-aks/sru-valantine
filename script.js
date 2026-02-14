@@ -18,6 +18,8 @@ function goToStage(n) {
 
     if (n === 5) startFireworks('fireworksCanvas');
     if (n === 6) startFireworks('fireworksCanvas2');
+    if (n === 7) initVideoStage();
+    if (n === 8) initFinalCelebration();
 }
 
 // ── Floating Hearts ──
@@ -370,6 +372,42 @@ function startFireworks(canvasId) {
 
     launchFirework();
     setInterval(launchFirework, 1200);
+}
+
+// ============================================
+// STAGE 7: Video
+// ============================================
+
+function initVideoStage() {
+    const video = document.getElementById('valentineVideo');
+    if (!video) return;
+
+    // Optional: pause bg music so video audio is clear
+    const bgMusic = document.getElementById('bgMusic');
+    if (bgMusic && !bgMusic.paused) {
+        bgMusic.pause();
+        const musicToggle = document.getElementById('musicToggle');
+        if (musicToggle) {
+            musicToggle.textContent = '🎵';
+            musicToggle.style.borderColor = 'rgba(255,255,255,0.3)';
+        }
+    }
+
+    video.play().catch(err => {
+        console.warn("Video play failed (likely blocked), user must click play:", err);
+    });
+
+    video.onended = () => {
+        goToStage(8);
+    };
+}
+
+// ============================================
+// STAGE 8: Final Celebration
+// ============================================
+
+function initFinalCelebration() {
+    startFireworks('fireworksCanvas3');
 }
 
 // ============================================
