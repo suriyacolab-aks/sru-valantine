@@ -95,7 +95,7 @@ const CONFIG = {
     // Music settings
     music: {
         enabled: true,
-        autoplay: false,
+        autoplay: true,
         musicUrl: "./music/song.mp3",
         startText: "🎵",
         stopText: "🔇",
